@@ -1,1 +1,1 @@
-print('Joł ziomek')
+print('Joł  ziomek')
