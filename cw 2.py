@@ -54,7 +54,7 @@ def zad7():
     print(lista)
 
 def zad8():
-    l = [4, 6, 'eje', 'ala', 'ala', 6]
+    l = [-2, 4, 6, 'eje', 'ala', 'ala', 6]
     dir = dict()
     for i in l:
         if i not in dir.keys():
@@ -64,7 +64,7 @@ def zad8():
     print(dir)
     dir1 = {}
     for i in dir:
-        if str(i).isnumeric():
+        if str(i).strip('-').isnumeric():
             dir1[i]=dir[i]
     dir = dir1
     print(dir)
