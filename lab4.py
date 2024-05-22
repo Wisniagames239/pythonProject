@@ -142,10 +142,10 @@ def zad6():
 
 def zad7():
     def gener(n):
-        mac = np.diag([2 for a in range(n)])
+        mac = np.diag([2 for _ in range(n)])
         for i in range(2,n+1):
-            mac+=np.diag([2*i for a in range(n-i+1)],k=i-1)
-            mac += np.diag([2 * i for a in range(n - i+1)], k=-i+1)
+            mac+=np.diag([2*i for _ in range(n-i+1)],k=i-1)
+            mac += np.diag([2 * i for _ in range(n - i+1)], k=-i+1)
         print(mac)
     gener(5)
 
@@ -181,32 +181,35 @@ def zad9():
     print(fibonacci)
 
 def main():
-    wybor = input('Jakie zadanie mam ci zrobic: ')
-    if wybor.isnumeric():
-        wybor = int(wybor)
-        match wybor:
-            case 1:
-                zad1()
-            case 2:
-                zad2()
-            case 3:
-                zad3()
-            case 4:
-                zad4()
-            case 5:
-                zad5()
-            case 6:
-                zad6()
-            case 7:
-                zad7()
-            case 8:
-                zad8()
-            case 9:
-                zad9()
-            case _:
-                print('Nie ma takiego zadania')
-    else:
-        print('To nie jest liczba naturalna')
+    while True:
+        wybor = input('Jakie zadanie mam ci zrobic: ')
+        if wybor.isnumeric():
+            wybor = int(wybor)
+            match wybor:
+                case 1:
+                    zad1()
+                case 2:
+                    zad2()
+                case 3:
+                    zad3()
+                case 4:
+                    zad4()
+                case 5:
+                    zad5()
+                case 6:
+                    zad6()
+                case 7:
+                    zad7()
+                case 8:
+                    zad8()
+                case 9:
+                    zad9()
+                case _:
+                    print('Nie ma takiego zadania')
+        elif wybor=="end":
+            break
+        else:
+            print('To nie jest liczba naturalna')
 
 
 if __name__ == "__main__":
